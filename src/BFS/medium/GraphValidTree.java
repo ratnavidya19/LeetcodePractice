@@ -6,8 +6,6 @@ import java.util.List;
 import java.util.Set;
 
 public class GraphValidTree {
-
-
     public boolean IsGraphValid(int n, int[][] edges){
 
         if(n == 0)
@@ -32,8 +30,6 @@ public class GraphValidTree {
             adjList.get(u).add(v);
             adjList.get(v).add(u);
         }
-
-
 
         for(int i = 0; i<n; i++){
             if(!visited.contains(i)){
