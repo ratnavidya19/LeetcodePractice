@@ -3,6 +3,12 @@ package DFS.Medium;
 import java.util.ArrayList;
 import java.util.List;
 
+//Given the root of a binary tree, return the maximum width of the given tree.
+//The maximum width of a tree is the maximum width among all levels.
+//The width of one level is defined as the length between the end-nodes (the leftmost and rightmost non-null nodes),
+// where the null nodes between the end-nodes that would be present in a complete binary tree extending
+// down to that level are also counted into the length calculation.
+//reference - https://www.youtube.com/watch?v=xTjTCAvHUO0
 public class MaximumWidthBinaryTree {
 
     public static class TreeNode {

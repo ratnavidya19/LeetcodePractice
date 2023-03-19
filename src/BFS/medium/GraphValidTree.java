@@ -17,8 +17,7 @@ public class GraphValidTree {
         }
 
         List<List<Integer>> adjList = new ArrayList<>();
-        Set<Integer> visited = new HashSet<>();
-
+        boolean[] visited = new boolean[n];
         //initialize
         for(int i = 0; i<n; i++){
             adjList.add(new ArrayList<>());
@@ -31,27 +30,28 @@ public class GraphValidTree {
             adjList.get(v).add(u);
         }
 
+        if(hasCycle(adjList, 0, visited, -1)){
+            return false;
+        }
         for(int i = 0; i<n; i++){
-            if(!visited.contains(i)){
+            if (!visited[i]) {
                 return false;
             }
         }
-        hasCycle(adjList, 0, visited, -1);
-        return visited.size()==n && edges.length == n-1;
+        return true;
 
     }
 
-    public void hasCycle(List<List<Integer>> adjList, int node, Set<Integer> visited, int parent){
-        if(visited.contains(node))
-            return;
-        visited.add(node);
-        for(int edge : adjList.get(node)){
-            hasCycle(adjList, edge, visited, node);
+    public boolean hasCycle(List<List<Integer>> adjList, int node, boolean[] visited, int parent){
+
+        visited[node] = true;
+        for (int i = 0; i < adjList.get(node).size(); i++) {
+            int v = adjList.get(node).get(i);
+
+            if ((visited[v] && parent != v) || (!visited[v] && hasCycle(adjList, v, visited, node)))
+                return true;
         }
-    }
 
-    public static void main(String args[])
-    {
-
+        return false;
     }
 }
