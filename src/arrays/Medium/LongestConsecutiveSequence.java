@@ -43,6 +43,5 @@ public class LongestConsecutiveSequence {
 
         System.out.println("Length of longest sequence: " + number);
 
-
     }
 }

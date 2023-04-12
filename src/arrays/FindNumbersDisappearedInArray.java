@@ -3,7 +3,7 @@ package arrays;
 import java.util.ArrayList;
 import java.util.HashSet;
 //Given an array nums of n integers where nums[i] is in the range [1, n], return an array of all the integers
-// in the range [1, n] that do not appear in nums.
+//in the range [1, n] that do not appear in nums.
 public class FindNumbersDisappearedInArray{
 
     public static ArrayList<Integer> findMissingNumbers(int[] arr, int n){
