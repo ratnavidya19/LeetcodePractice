@@ -1,5 +1,5 @@
 package searching;
-
+//The time complexity of the binary search algorithm is O(log n).
 public class BinarySearch {
 
     public int searchNumber(int[] array, int key, int low, int high){

@@ -35,7 +35,7 @@ public class StackUsingLinkedList {
         int popped = Integer.MIN_VALUE;
         if(root == null)
         {
-            System.out.println("Stack is empty ");
+            System.out.println("LinkedList is empty ");
         }
         else {
             popped = root.data;
@@ -47,7 +47,7 @@ public class StackUsingLinkedList {
     public int peek(){
         if(root == null)
         {
-            System.out.println("Stack is empty ");
+            System.out.println("LinkedList is empty ");
             return 0;
         }
         else {

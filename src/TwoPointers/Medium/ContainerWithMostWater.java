@@ -4,7 +4,7 @@ package TwoPointers.Medium;
 // of the ith line are (i, 0) and (i, height[i]).
 //Find two lines that together with the x-axis form a container, such that the container contains the most water.
 //Return the maximum amount of water a container can store.
-//reference - https://www.youtube.com/watch?v=aO9eAw1wKvE
+//reference - https://www.youtube.com/watch?v=aO9eAw1wKvE     Time complexity - 0(n2)
 public class ContainerWithMostWater {
 
     public int maxArea(int[] height) {
