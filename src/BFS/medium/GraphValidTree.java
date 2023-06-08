@@ -6,6 +6,9 @@ import java.util.List;
 import java.util.Set;
 
 public class GraphValidTree {
+
+    Set<Integer> visited;
+    List<List<Integer>> adjList;
     public boolean IsGraphValid(int n, int[][] edges){
 
         if(n == 0)
@@ -16,8 +19,8 @@ public class GraphValidTree {
             return false;
         }
 
-        List<List<Integer>> adjList = new ArrayList<>();
-        boolean[] visited = new boolean[n];
+        adjList = new ArrayList<>();
+        visited = new HashSet<>();
         //initialize
         for(int i = 0; i<n; i++){
             adjList.add(new ArrayList<>());
@@ -30,28 +33,21 @@ public class GraphValidTree {
             adjList.get(v).add(u);
         }
 
-        if(hasCycle(adjList, 0, visited, -1)){
-            return false;
-        }
-        for(int i = 0; i<n; i++){
-            if (!visited[i]) {
-                return false;
-            }
-        }
-        return true;
+        boolean noCycle = dfs(0);
+        return noCycle == true && visited.size() == n;
 
     }
 
-    public boolean hasCycle(List<List<Integer>> adjList, int node, boolean[] visited, int parent){
+    public boolean dfs(int node){
 
-        visited[node] = true;
+        if(visited.contains(node))  return false;
+
+        visited.add(node);
+
         for (int i = 0; i < adjList.get(node).size(); i++) {
-            int v = adjList.get(node).get(i);
-
-            if ((visited[v] && parent != v) || (!visited[v] && hasCycle(adjList, v, visited, node)))
-                return true;
+            dfs(i);
         }
 
-        return false;
+        return true;
     }
 }
