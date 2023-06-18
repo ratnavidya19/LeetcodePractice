@@ -1,4 +1,4 @@
-package arrays;
+package arrays.Easy;
 
 import java.util.ArrayList;
 import java.util.HashSet;
