@@ -1,4 +1,4 @@
-package arrays.Easy;
+package arrays.Medium;
 
 public class BuyAndSellStockII {
 

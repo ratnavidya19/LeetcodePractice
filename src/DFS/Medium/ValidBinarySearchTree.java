@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 //Given the root of a binary tree, determine if it is a valid binary search tree (BST).
+//Youtube- https://www.youtube.com/watch?v=KPqVR66F20s
+//Time complexity: O(n)
 public class ValidBinarySearchTree {
 
     public static class TreeNode {

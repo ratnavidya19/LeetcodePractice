@@ -4,6 +4,7 @@ import BFS.medium.BinaryTreeZigzagLevelTraversal;
 
 //Given a binary search tree (BST), find the lowest common ancestor (LCA) node of two given nodes in the BST.
 //reference - https://www.youtube.com/watch?v=O2BDQ8hP-MM
+//Time complexity: O(h) h is the height of the tree.
 public class LowestCommonAncestorOfBinarySearchTree {
 
     public static class TreeNode {
