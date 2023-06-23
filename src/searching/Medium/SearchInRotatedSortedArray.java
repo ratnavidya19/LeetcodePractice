@@ -1,8 +1,9 @@
-package searching;
+package searching.Medium;
 
 //Given the array nums after the possible rotation and an integer target,
 // return the index of target if it is in nums, or -1 if it is not in nums.
 //reference - https://www.youtube.com/watch?v=NiM1B0M6YRE&t=757s
+//Time complexity - O(n)
 public class SearchInRotatedSortedArray {
 
     public int searchInArray(int[] array, int target){
@@ -29,7 +30,7 @@ public class SearchInRotatedSortedArray {
                     left = mid + 1;
                 }
                 else {
-                    right = mid + 1;
+                    right = mid - 1;
                 }
             }
         }
