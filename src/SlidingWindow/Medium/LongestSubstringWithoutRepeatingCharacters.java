@@ -1,26 +1,32 @@
 package SlidingWindow.Medium;
 
 import java.util.HashMap;
+import java.util.HashSet;
+
 //Given a string s, find the length of the longest substring without repeating characters.
 //https://www.youtube.com/watch?v=qtVh-XEpsJo  or https://www.youtube.com/watch?v=RqxIXM6eyiY
 public class LongestSubstringWithoutRepeatingCharacters {
 
     public int lengthOfLongestSubstring(String s) {
-        HashMap<Character, Integer> map = new HashMap<>();
-        int left = 0;
-        int right = 0;
-        int maxLen = 0;
-        while (right < s.length()) {
-            if (map.containsKey(s.charAt(right))) {
-                left = Math.max(map.get(s.charAt(right)) + 1, left);
+        HashSet<Character> set = new HashSet<>();
+        int start =0, end=0;
+        int maxLength = 0;
+        while(start < s.length()){
+            if(!set.contains(s.charAt(start))){
+                set.add(s.charAt(start));
+                if((start-end+1) > maxLength){
+                    maxLength = start-end+1;
+                }
+                start++;
             }
-            map.put(s.charAt(right), right);
-            maxLen = Math.max(maxLen, right - left + 1);
-            right++;
+            else
+            {
+                set.remove(s.charAt(end));
+                end++;
+            }
         }
 
-        return maxLen;
-
+        return maxLength;
     }
 
     public static void main(String[] args) {
