@@ -1,6 +1,4 @@
-package linkedlist.Easy.Medium;
-
-import linkedlist.Easy.MergeTwoSortedList;
+package linkedlist.Medium;
 
 //
 //Youtube - https://www.youtube.com/watch?v=mD7L5l2NmGU
