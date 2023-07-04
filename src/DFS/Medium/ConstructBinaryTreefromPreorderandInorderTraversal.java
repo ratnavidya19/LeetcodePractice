@@ -3,6 +3,7 @@ package DFS.Medium;
 import java.util.HashMap;
 
 //Youtube- https://www.youtube.com/watch?v=GeltTz3Z1rw
+//Time complexity - O(n) because we are traversing both the arrays once
 public class ConstructBinaryTreefromPreorderandInorderTraversal {
 
     public static class TreeNode {
