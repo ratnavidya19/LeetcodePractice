@@ -1,6 +1,6 @@
 package dynamicProgramming.medium;
 
-//Youtube -     https://www.youtube.com/watch?v=LCtzDl1uT_U
+//Youtube - https://www.youtube.com/watch?v=ZwDDLAeeBM0
 public class HouseRobber {
 
     public int rob(int[] nums) {
