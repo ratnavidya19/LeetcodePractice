@@ -6,6 +6,7 @@ import java.util.Stack;
 // '#' means a backspace character.
 //Note that after backspacing an empty text, the text will continue empty.
 //reference - https://www.youtube.com/watch?v=ddyikohCqyo
+//time complexity - O(m+n)
 public class BackspaceStringCompare {
     //bruteForce
     public boolean backspaceCompare(String s, String t) {
