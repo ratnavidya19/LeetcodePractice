@@ -13,10 +13,10 @@ public class ReverseInteger {
             pop = x%10;
             x = x/10;
 
-            if(reversed > Integer.MAX_VALUE/10 || reversed == Integer.MAX_VALUE/10 && pop > 7){
+            if(reversed > Integer.MAX_VALUE/10){
                 return 0;
             }
-            if(reversed < Integer.MIN_VALUE/10 || reversed == Integer.MIN_VALUE/10 && pop < -8){
+            if(reversed < Integer.MIN_VALUE/10){
                 return 0;
             }
             reversed = (reversed*10)+pop;
