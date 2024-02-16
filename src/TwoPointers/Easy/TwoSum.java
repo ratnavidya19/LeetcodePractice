@@ -8,7 +8,7 @@ public class TwoSum {
 
     public int[] findTwoSum(int[] nums, int target) {
 
-        int[] result = new int[5];
+      //  int[] result = new int[5];
         int low = 0;
         int high = nums.length-1;
         while(low<high){

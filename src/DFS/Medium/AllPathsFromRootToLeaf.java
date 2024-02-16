@@ -13,8 +13,6 @@ public class AllPathsFromRootToLeaf {
         }
     }
 
-
-
     public ArrayList<ArrayList<Integer>> Paths(Node root){
         // Code here
         ArrayList<ArrayList<Integer>> list = new ArrayList<>();

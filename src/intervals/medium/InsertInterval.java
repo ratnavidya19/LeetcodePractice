@@ -17,7 +17,6 @@ public class InsertInterval {
             else if(interval[0] > newInterval[1]){
                 list.add(newInterval);
                 newInterval = interval;
-                newInterval = interval;
             }
             else
             {

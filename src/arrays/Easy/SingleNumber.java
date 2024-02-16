@@ -29,7 +29,5 @@ public class SingleNumber {
         int number = singleNumber.findSingleNumber(arr);
         System.out.println("Single number: "+number);
 
-
-
     }
 }
